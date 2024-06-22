@@ -14,15 +14,10 @@
         #top-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            margin: 0;
-            padding: 0;
-            top: 0;
 	    grid-gap: 10px;	
         }
 
         #top-container img {
-            margin: 0;
-            padding: 0;
             width: 70px;
             height: 50px;
         }
@@ -79,7 +74,9 @@
 
 #container{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	 grid-gap: 10px;
+	grid-template-row:auto;
 }
         #slide {
             margin: 5px;
