@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WealthWise- Your Gateway to Financial Freedom</title>
+    <meta name="description" content="WW offers a wide range of earning and investment opportunities in forex, cryptocurrency, real estate, and agriculture and more. Join Us today!"></head>
+    <style type="text/css">
+        body {
+            background-color: #1b5860;
+            color:white;
+        }
+
+        #top-container {
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            margin: 0;
+            padding: 0;
+            top: 0;
+        }
+
+        #top-container img {
+            margin: 0;
+            padding: 0;
+            width: 70px;
+            height: 50px;
+        }
+
+        #menu {
+            text-align: center;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            margin: 1px;
+            padding: 1px;
+        }
+
+        #menu li {
+            display: inline-block;
+            padding: 5px;
+            font-size: 1.5em;
+            font: bold;
+        }
+
+        #menu li:hover {
+            background-color: rgba(52, 62, 81, 12);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+#news-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-slide {
+    width: 100%;
+    background-color:antiquewhite;
+    color: #333;
+    font-size: 18px;
+    display: none;
+}
+
+
+
+
+
+        #intro p{
+        	text-align: justify;
+        	padding: 10px;
+
+        }
+
+#container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+        #slide {
+            margin: 5px;
+            background-color:#72cbd854;;
+            border-radius: 10px;
+            text-align: center;
+            color: floralwhite;
+            box-shadow: antiquewhite;
+        }
+
+       p{
+            text-align: center;
+        }
+        #slide:hover{
+             background-color:#752322;
+             color:gold;
+
+        }
+
+        #slide button {
+            width: 100px;
+        }
+
+        #slide button:hover {
+            color: white;
+            background-color: darkgoldenrod;
+        }
+
+        #userlog button {
+            margin: 2px;
+            width: 100%;
+        }
+        #subc{
+          
+            margin: 20px;
+            text-align: center;
+            color: gold;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100px;
+            border-radius: 5px;
+        }
+        #subc input{
+            border-radius: 10px;
+
+
+        }
+    </style>
+
+
+<body>
+    <div id="top-container">
+        <div><img id="logo" src="logo.png" alt="WealthWise"></div>
+        <div id="menu">
+            <ul>
+                <li>Home</li>
+                <li>Earn Extra</li>
+                <li>Investment</li>
+                <li>Startups</li>
+                <li>Markets</li>
+                <li>Tokens</li>
+                 <li>Airdrops</li>
+            </ul>
+        </div>
+        <div id="userlog"><button>Login</button><button>Register</button></div>
+    </div>
+    <div id="news-slider">Updates:
+    <div class="news-slide">Breaking News: Market Update</div>
+    <div class="news-slide">New Investment Opportunities Available Now</div>
+    <div class="news-slide">Expert Tips for Successful Trading</div>
+    <!-- Add more news slides as needed -->
+</div>
+    <hr>
+
+    <div id="intro">
+    	<h2>Welcome to WealthWise, Your Gateway to Financial Freedom!</h2>
+
+<p>At WealthWise, we offer a wide range of investment opportunities across various financial markets. Whether you're an experienced trader or new to investing, our platform equips you with the tools, resources, and support needed for success in finance. Explore diverse markets including forex, cryptocurrencies, real estate, and agricultural commodities to match your investment preferences and goals. Navigate financial complexities confidently with our comprehensive trading tools, real-time market data, and educational materials. Our platform prioritizes security and convenience, ensuring your assets and personal information are safeguarded while providing a user-friendly experience across desktop and mobile devices. Receive expert support from our experienced professionals for technical assistance, trading advice, or account guidance. Start your trading journey with WealthWise today and unlock opportunities for financial success.</p>
+    </div>
+   <div id="container">
+       	<div id="slide">
+    <h1>Stocks</h1>
+    
+    <p>Stay updated with the latest trends in the stock market. Explore a wide range of stocks and investment opportunities.</p>
+   
+</div>
+        <div id="slide">
+
+            <h1>FOREX</h1>
+         
+            <p>Explore the dynamic world of foreign exchange trading. Take advantage of our comprehensive tools and resources to navigate the complexities of the forex market and seize profitable opportunities.</p>
+           
+        </div>
+        <div id="slide">
+            <h1>Cryptocurrency</h1>
+    
+            <p>Dive into the exciting realm of cryptocurrencies. Discover a diverse range of digital assets and trading pairs, and leverage our platform to capitalize on the volatile nature of the crypto market.</p>
+           
+        </div>
+        <div id="slide">
+            <h1>Real Estate</h1>
+   
+            <p>Unlock the potential of real estate investments. Whether you're interested in residential properties, commercial spaces, or land development projects, our platform provides the tools and support you need to grow your portfolio.</p>
+           
+        </div>
+        <div id="slide">
+            <h1>Agriculture</h1>
+           
+            <p>Experience the agricultural market like never before. From crop futures to livestock trading, we offer a wide range of investment opportunities in the agricultural sector to help you diversify your portfolio and hedge against market volatility.</p>
+            
+        </div>
+   </div>
+</body>
+<footer>
+    <div id="subc">
+        <label>For Updates:<input type="email" placeholder="Enter Your Email"></label><button>Subscribe</button>
+    </div>
+    <hr>
+    <p>Wealth Wise Copyright Reserved &copy;2024</p>
+</footer>
+<script type="text/javascript">
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("news-slide");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+}
+
+
+</script>
+<script src="img.js" type="text/javascript"></script>
+</html>
