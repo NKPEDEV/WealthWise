@@ -21,11 +21,7 @@
             width: 70px;
             height: 50px;
         }
-@media (max-width: 600px) {
-#top-container { 
-	grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
-}
-}
+
         #menu {
             text-align: center;
         }
@@ -77,6 +73,11 @@
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	 grid-gap: 10px;
 	grid-template-row:auto;
+}
+	    @media (max-width: 600px) {
+#container{ 
+	grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+}
 }
         #slide {
             margin: 5px;
