@@ -1,223 +1,779 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WealthWise- Your Gateway to Financial Freedom</title>
-    <meta name="description" content="WW offers a wide range of earning and investment opportunities in forex, cryptocurrency, real estate, and agriculture and more. Join Us today!"></head>
-    <style type="text/css">
-        body {
-            background-color: #1b5860;
-            color:white;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-         #top-container {
-            display: grid;
-            grid-template-columns: 1fr 4fr 1fr;
-            margin: 0;
-            padding: 0;
-            top: 0;
-        }
+<title>WealthWise | Financial Growth & Investment</title>
 
-        #top-container img {
-            width: 70px;
-            height: 50px;
-        }
+<meta name="description" content="Explore investment opportunities in stocks, forex, cryptocurrency, real estate and agriculture with WealthWise.">
 
-        #menu {
-            text-align: center;
-        }
-
-        #menu ul {
-            list-style-type: none;
-            margin: 1px;
-            padding: 1px;
-        }
-
-        #menu li {
-            display: inline-block;
-            padding: 5px;
-            font-size: 1.5em;
-            font: bold;
-        }
-
-        #menu li:hover {
-            background-color: rgba(52, 62, 81, 12);
-            border-radius: 10px;
-            cursor: pointer;
-        }
-#news-slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+<style>
+:root {
+    --primary: #0b252c;
+    --secondary: #123e46;
+    --accent: #d9ad45;
+    --light: #f5f7f8;
+    --white: #ffffff;
 }
 
-.news-slide {
-    width: 100%;
-    background-color:antiquewhite;
-    color: #333;
-    font-size: 18px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px #0002;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.menu-btn {
     display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
+/* NEWS TICKER */
 
-
-
-
-        #intro p{
-        	text-align: justify;
-        	padding: 10px;
-
-        }
-
-#container{
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	 grid-gap: 10px;
-	grid-template-row:auto;
+.news {
+    background: var(--accent);
+    color: #17272b;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
 }
-	    @media (max-width: 600px) {
-#container{ 
-	grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+
+.news strong {
+    margin-right: 15px;
 }
+
+.news marquee {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
 }
-        #slide {
-            margin: 5px;
-            background-color:#72cbd854;;
-            border-radius: 10px;
-            text-align: center;
-            color: floralwhite;
-            box-shadow: antiquewhite;
-        }
 
-       p{
-            text-align: center;
-        }
-        #slide:hover{
-             background-color:#752322;
-             color:gold;
+/* HERO */
 
-        }
+.hero {
+    min-height: 480px;
+    background:
+    linear-gradient(90deg, #0b252cf2, #123e46bb),
+    url("investment.jpg") center/cover;
+    color: white;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+}
 
-        #slide button {
-            width: 100px;
-        }
+.hero-content {
+    max-width: 700px;
+}
 
-        #slide button:hover {
-            color: white;
-            background-color: darkgoldenrod;
-        }
+.hero h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
 
-        #userlog button {
-            margin: 2px;
-            width: 100%;
-        }
-        #subc{
-          
-            margin: 20px;
-            text-align: center;
-            color: gold;
-            align-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100px;
-            border-radius: 5px;
-        }
-        #subc input{
-            border-radius: 10px;
+.hero h1 span {
+    color: var(--accent);
+}
 
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #e5eeee;
+}
 
-        }
-    </style>
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #142a2f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+}
 
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* COUNTER */
+
+.counter-section {
+    background: var(--secondary);
+    padding: 45px 6%;
+    color: white;
+}
+
+.counter-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.counter-box {
+    padding: 20px 10px;
+    border-right: 1px solid #ffffff30;
+}
+
+.counter-box:last-child {
+    border: none;
+}
+
+.counter-box h2 {
+    font-size: 38px;
+    color: var(--accent);
+}
+
+.counter-box p {
+    font-size: 15px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    color: var(--primary);
+    font-size: 32px;
+}
+
+.section-title p {
+    color: #667;
+    margin-top: 8px;
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #566;
+}
+
+/* INVESTMENT CARDS */
+
+.investments {
+    background: #edf2f3;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px #0000000d;
+    transition: .3s;
+    border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--accent);
+    box-shadow: 0 10px 25px #0002;
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #667;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #a77b1e;
+    font-weight: bold;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 22px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    background: white;
+    text-align: center;
+}
+
+.newsletter form {
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.newsletter button {
+    border: none;
+}
+
+/* FOOTER */
+
+footer {
+    background: #07191e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    color: #b9c5c7;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 20px;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .counter-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .hero {
+        padding: 75px 7%;
+        min-height: 400px;
+    }
+}
+
+@media(max-width: 450px) {
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
 
 <body>
-    <div id="top-container">
-        <div><img id="logo" src="logo.png" alt="WealthWise"></div>
-        <div id="menu">
-            <ul>
-                <li>Home</li>
-                <li>Earn Extra</li>
-                <li>Investment</li>
-                <li>Startups</li>
-                <li>Markets</li>
-                <li>Tokens</li>
-                 <li>Airdrops</li>
-            </ul>
-        </div>
-    
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        <img src="logo.png" alt="WealthWise Logo">
+        WealthWise
     </div>
-    <div id="news-slider">Updates:
-    <div class="news-slide">Breaking News: Market Update</div>
-    <div class="news-slide">New Investment Opportunities Available Now</div>
-    <div class="news-slide">Expert Tips for Successful Trading</div>
-    <!-- Add more news slides as needed -->
+
+    <button class="menu-btn" id="menuBtn"
+    aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav id="navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#investments">Investment</a></li>
+            <li><a href="#markets">Markets</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#newsletter">Updates</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- NEWS -->
+
+<div class="news">
+    <strong>WEALTHWISE UPDATES:</strong>
+
+    <marquee scrollamount="5">
+        Welcome to WealthWise! |
+        Explore financial markets and investment education |
+        Make informed financial decisions |
+        Stay updated with market developments.
+    </marquee>
 </div>
-    <hr>
 
-    <div id="intro">
-    	<h2>Welcome to WealthWise, Your Gateway to Financial Freedom!</h2>
+<!-- HERO -->
 
-<p>At WealthWise, we offer a wide range of investment opportunities across various financial markets. Whether you're an experienced trader or new to investing, our platform equips you with the tools, resources, and support needed for success in finance. Explore diverse markets including forex, cryptocurrencies, real estate, and agricultural commodities to match your investment preferences and goals. Navigate financial complexities confidently with our comprehensive trading tools, real-time market data, and educational materials. Our platform prioritizes security and convenience, ensuring your assets and personal information are safeguarded while providing a user-friendly experience across desktop and mobile devices. Receive expert support from our experienced professionals for technical assistance, trading advice, or account guidance. Start your trading journey with WealthWise today and unlock opportunities for financial success.</p>
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Build Your Future.
+            <span>Grow Your Wealth.</span>
+        </h1>
+
+        <p>
+            Welcome to WealthWise, your gateway to exploring
+            financial markets, investment opportunities and
+            financial education.
+        </p>
+
+        <a href="#investments" class="btn">
+            Explore Opportunities
+        </a>
+
     </div>
-   <div id="container">
-       	<div id="slide">
-    <h1>Stocks</h1>
-    
-    <p>Stay updated with the latest trends in the stock market. Explore a wide range of stocks and investment opportunities.</p>
-   
-</div>
-        <div id="slide">
 
-            <h1>FOREX</h1>
-         
-            <p>Explore the dynamic world of foreign exchange trading. Take advantage of our comprehensive tools and resources to navigate the complexities of the forex market and seize profitable opportunities.</p>
-           
+</section>
+
+<!-- COUNTER -->
+
+<div class="counter-section">
+
+    <div class="counter-container">
+
+        <div class="counter-box">
+            <h2 class="counter" data-target="5000">0</h2>
+            <p>Community Members</p>
         </div>
-        <div id="slide">
-            <h1>Cryptocurrency</h1>
-    
-            <p>Dive into the exciting realm of cryptocurrencies. Discover a diverse range of digital assets and trading pairs, and leverage our platform to capitalize on the volatile nature of the crypto market.</p>
-           
+
+        <div class="counter-box">
+            <h2 class="counter" data-target="25">0</h2>
+            <p>Market Categories</p>
         </div>
-        <div id="slide">
-            <h1>Real Estate</h1>
-   
-            <p>Unlock the potential of real estate investments. Whether you're interested in residential properties, commercial spaces, or land development projects, our platform provides the tools and support you need to grow your portfolio.</p>
-           
+
+        <div class="counter-box">
+            <h2 class="counter" data-target="10">0</h2>
+            <p>Investment Sectors</p>
         </div>
-        <div id="slide">
-            <h1>Agriculture</h1>
-           
-            <p>Experience the agricultural market like never before. From crop futures to livestock trading, we offer a wide range of investment opportunities in the agricultural sector to help you diversify your portfolio and hedge against market volatility.</p>
-            
+
+        <div class="counter-box">
+            <h2 class="counter" data-target="100">0</h2>
+            <p>Percent Commitment</p>
         </div>
-   </div>
-</body>
+
+    </div>
+
+</div>
+
+<!-- INTRODUCTION -->
+
+<section id="about">
+
+    <div class="section-title">
+        <h2>Welcome to WealthWise</h2>
+        <p>Your journey towards financial knowledge starts here.</p>
+    </div>
+
+    <div class="intro">
+
+        <p>
+            At WealthWise, we provide information and resources
+            covering different financial markets and investment
+            sectors. Whether you are new to investing or an
+            experienced market participant, our goal is to help
+            you understand financial opportunities and make
+            informed decisions.
+
+            Explore stocks, forex, cryptocurrency, real estate
+            and agricultural markets. Discover educational
+            resources, market insights and tools designed to
+            support your financial journey.
+
+            Remember that all investments carry risks, and
+            returns are never guaranteed.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- INVESTMENTS -->
+
+<section class="investments" id="investments">
+
+    <div class="section-title">
+
+        <h2>Explore Investment Markets</h2>
+
+        <p>
+            Discover different sectors and broaden your
+            financial knowledge.
+        </p>
+
+    </div>
+
+    <div class="card-container" id="markets">
+
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>Stocks</h3>
+            <p>
+                Explore publicly traded companies, stock
+                market trends and equity investment concepts.
+            </p>
+            <a href="#">Explore More →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💱</div>
+            <h3>Forex</h3>
+            <p>
+                Learn about currency pairs, exchange rates
+                and the global foreign exchange market.
+            </p>
+            <a href="#">Explore More →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">₿</div>
+            <h3>Cryptocurrency</h3>
+            <p>
+                Discover blockchain technology, digital
+                currencies and cryptocurrency markets.
+            </p>
+            <a href="#">Explore More →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>Real Estate</h3>
+            <p>
+                Explore property investment, real estate
+                development and property market trends.
+            </p>
+            <a href="#">Explore More →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌾</div>
+            <h3>Agriculture</h3>
+            <p>
+                Discover agricultural commodities,
+                agribusiness and farming opportunities.
+            </p>
+            <a href="#">Explore More →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Startups</h3>
+            <p>
+                Learn about entrepreneurship, business
+                innovation and emerging enterprises.
+            </p>
+            <a href="#">Explore More →</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+
+    <h2>Start Your Financial Journey Today!</h2>
+
+    <p>
+        Knowledge is the foundation of informed financial decisions.
+        Explore, learn and grow with WealthWise.
+    </p>
+
+    <a href="#newsletter" class="btn">
+        Stay Connected
+    </a>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter" id="newsletter">
+
+    <div class="section-title">
+
+        <h2>Stay Updated</h2>
+
+        <p>
+            Subscribe to receive WealthWise news and educational updates.
+        </p>
+
+    </div>
+
+    <form id="subscribeForm">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit" class="btn">
+            Subscribe
+        </button>
+
+    </form>
+
+    <p id="message" aria-live="polite"></p>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
-    <div id="subc">
-        <label>For Updates:<input type="email" placeholder="Enter Your Email"></label><button>Subscribe</button>
-    </div>
-    <hr>
-    <p>Wealth Wise Copyright Reserved &copy;2024</p>
+
+    <h3>WealthWise</h3>
+
+    <p>
+        Your Gateway to Financial Knowledge and Opportunities.
+    </p>
+
+    <br>
+
+    <p>
+        &copy; <span id="year"></span> WealthWise.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Investments involve risk. Always conduct independent
+        research before making financial decisions.
+    </p>
+
 </footer>
-<script type="text/javascript">
-let slideIndex = 0;
-showSlides();
 
-function showSlides() {
-    let i;
-    const slides = document.getElementsByClassName("news-slide");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 5000); // Change slide every 5 seconds
-}
+<script>
 
+// MOBILE NAVIGATION
+
+const menuBtn = document.getElementById("menuBtn");
+const navigation = document.getElementById("navigation");
+
+menuBtn.addEventListener("click", () => {
+
+    const isOpen = navigation.classList.toggle("active");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        navigation.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+    });
+
+});
+
+
+// ANIMATED COUNTER
+
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const counter = entry.target;
+            const target = Number(counter.dataset.target);
+
+            let current = 0;
+            const increment = Math.max(1, Math.ceil(target / 100));
+
+            const updateCounter = () => {
+
+                current += increment;
+
+                if (current < target) {
+
+                    counter.textContent =
+                        current.toLocaleString() + "+";
+
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.textContent =
+                        target.toLocaleString() + "+";
+
+                }
+
+            };
+
+            updateCounter();
+
+            observer.unobserve(counter);
+
+        }
+
+    });
+
+}, { threshold: 0.5 });
+
+counters.forEach(counter => observer.observe(counter));
+
+
+// CURRENT YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+// NEWSLETTER DEMO
+
+document.getElementById("subscribeForm")
+.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+
+    document.getElementById("message").textContent =
+        "Thank you! Newsletter signup received for " + email;
+
+    this.reset();
+
+});
 
 </script>
-<script src="img.js" type="text/javascript"></script>
+
+</body>
 </html>
